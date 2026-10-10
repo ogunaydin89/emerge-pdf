@@ -1,0 +1,5 @@
+PyMuPDF
+Pillow
+pillow-heif
+EbookLib
+PyQt6
