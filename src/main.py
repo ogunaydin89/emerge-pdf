@@ -1,8 +1,11 @@
 import sys, os, io, html, re, zipfile
 import fitz  # PyMuPDF
 from PIL import Image
-import pillow_heif
-pillow_heif.register_heif_opener()
+try:
+    import pillow_heif
+    pillow_heif.register_heif_opener()
+except Exception:
+    pass
 from ebooklib import epub
 
 from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, 
