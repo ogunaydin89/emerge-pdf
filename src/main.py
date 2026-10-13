@@ -12,7 +12,7 @@ from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
                              QHBoxLayout, QPushButton, QLabel, QFileDialog, QMessageBox, 
                              QInputDialog, QMenu, QGridLayout, QDialog, QListWidget, QDialogButtonBox)
 from PyQt6.QtCore import Qt, QThread, pyqtSignal, QTimer
-from PyQt6.QtGui import QFont, QAction
+from PyQt6.QtGui import QFont, QAction, QIcon
 
 APP_VERSION = "0.7.1"
 
@@ -549,6 +549,9 @@ def main():
     # this Qt falls back to the interpreter basename ("python") and the window
     # never matches emerge-pdf.desktop, so the taskbar shows a generic icon.
     app.setDesktopFileName("emerge-pdf")
+    icon_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "icon.svg")
+    if os.path.exists(icon_path):
+        app.setWindowIcon(QIcon(icon_path))
     window = EmergePDFMainWindow()
     window.show()
     sys.exit(app.exec())
