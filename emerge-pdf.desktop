@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=EmergePDF
 Comment=Universal Offline Document & PDF Converter
-Exec=/home/helin/Code/emerge-pdf/run.sh
-Icon=/home/helin/Code/emerge-pdf/icon.svg
+Exec=/home/ogun/Code/emerge-pdf/run.sh
+Icon=/home/ogun/Code/emerge-pdf/icon.svg
 Terminal=false
 Type=Application
 Categories=Office;Utility;Graphics;
